@@ -1,0 +1,16 @@
+{
+  "name": "rmallowweb",
+  "version": "1.0.0",
+  "description": "portfolio website",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://bitnami@54.91.202.25:/~/stack/apps/rmallow/site.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
