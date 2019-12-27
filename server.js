@@ -1,5 +1,7 @@
 console.log('Server-side code running');
 
+const express = require('express');
+const app = express();
 var path = require('path')
 
 // serve files from the public directory
