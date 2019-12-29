@@ -14,6 +14,6 @@ app.listen(3000, () => {
 
 // serve the homepage
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html');
+  res.sendFile(path.join(__dirname + '/index.html'));
 });
 
