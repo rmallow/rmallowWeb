@@ -43,9 +43,12 @@ html, body {
 }
 
 #intro {
+	margin:0;
 	position: absolute;
 	right: 15%;
-	top: 38%;
+	top:50%;
+	-ms-transform: translateY(-50%);
+  	transform: translateY(-50%);
 	font-size: 3em;
 }
 
