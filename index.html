@@ -2,43 +2,40 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Rob Mallow</title>
-		<link rel="stylesheet" type="text/css" href="/css/mainStyle.css">
-		<link rel="stylesheet" type="text/css" href="public/css/mainStyle.css">
+		<title>meet me</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="public/css/style.css">
 		<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
-		<!-- <script type="text/javascript" src="/js/howler.js/dist/howler.js"></script>-->
+		<script src ="js/typing.js"></script>
+		<script src ="public/js/typing.js"></script>
 	</head>
-	<body>
-		<div class = "mainBlack">
-			<div id = "computerOptions">
-				<table id = "options" class = "verticalCenter">
-					<tr class = "redBottomBorder">
-						<td>LOCATION</td>
-					</tr>
-					<tr class = "redBottomBorder">
-						<td>MAJOR</td>
-					</tr>
-					<tr class = "redBottomBorder">
-						<td>CAREER</td>
-					</tr>
-					<tr>
-						<td>RESUME</td>
-					</tr>
-				</table>
+	<body onload = "typeWriter()">
+		<div id = "firstPageBox">  
+			<div id = "navBox"> 
+				<div id = "major" onclick="changeScreenText('major')"> MAJOR </div>  
+				<div id = "career" onclick="changeScreenText('career')"> CAREER </div>
+				<div id = "location" onclick="changeScreenText('location')"> LOCATION </div>   
+				<div id = "projects" onclick="changeScreenText('projects')"> PROJECTS </div>
+				<div id = "resume" onclick="changeScreenText('resume')"> RESUME </div> 
 			</div>
-			<div id = "computer" class = "verticalCenter typewriter">
-
+			<div id = "computerBox"> 
+				<div style= "position: relative">
+					<img src = "public/compEdit.jpg" class= "computerItems"> 
+					<div id = "screen" onclick="resumeCheck()" class = "computerItems">
+						<p id = "screenText"> </p>
+					</div>
+				</div>
 			</div>
-			<div id = "intro" class = "verticalCenter">
-				<p>hi<br>im<br>rob</p>
+			<div id = "hiBox"> 
+				<div class = "paddingBox"> </div> 
+				<p> hi im rob </p> 
+				<div class = "paddingBox"> </div>
+				<div class = "paddingBox"> </div>
+				<div class = "paddingBox"> </div>
 			</div>
-			<p  id = "scroll">Scroll to Continue<br>v</p>
-
-			</div>
-		<div class = "mainWhite">
-			<h1> Experience </h1>
 		</div>
-		<div class = "mainBlack">
+
+		<div style = "height: 100%">
 		</div>
 	</body>
 </html>
