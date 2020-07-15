@@ -53,6 +53,6 @@ function typeWriter() {
 
 function resumeCheck() {
 	if(resume == true) {
-		window.open('/Users/rmallow/Documents/testWeb/public/Resume_Robert_Mallow.pdf')
+		window.open('Resume_Robert_Mallow.pdf')
 	}
 }
