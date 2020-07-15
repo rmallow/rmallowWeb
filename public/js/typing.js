@@ -1,6 +1,6 @@
 var i = 0;
 var speed = 100; /* The speed/duration of the effect in milliseconds */
-var txt = "click an option on the left to find out more /n < /n < /m <"
+var txt = "click an option on the left to find out more /n < /n < /n <"
 var resume = false
 
 
@@ -13,10 +13,10 @@ function changeScreenText(itemClicked) {
 			txt = "residence: /n/tst. louis, missouri"
 			break;
 		case "major":
-			txt = "college: /n/tuniversity of alabama /nmajor: /n/t computer science and finance"
+			txt = "college: /n/t - university of alabama /nmajor: /n/t - computer science and finance"
 			break;
 		case "career":
-			txt = "company: /n/t boeing /n role: /n/t software engineer"
+			txt = "company: /n/t - boeing /n role: /n/t - software engineer"
 			break;
 		case "projects":
 			txt = "active personal projects: /n/t - this website /n/t- algo: a data management system"
