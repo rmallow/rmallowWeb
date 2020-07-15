@@ -10,7 +10,7 @@ function changeScreenText(itemClicked) {
 	resume = false
 	switch(String(itemClicked)) {
 		case "location":
-			txt = "residence: /n/tst. louis, missouri"
+			txt = "residence: /n/t- st. louis, missouri"
 			break;
 		case "major":
 			txt = "college: /n/t - university of alabama /nmajor: /n/t - computer science and finance"
