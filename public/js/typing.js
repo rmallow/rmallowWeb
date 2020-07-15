@@ -1,6 +1,6 @@
 var i = 0;
 var speed = 100; /* The speed/duration of the effect in milliseconds */
-var txt = "welcome to my website, click and scroll to find out more"
+var txt = "click an option on the left to find out more /n < /n < /m <"
 var resume = false
 
 
