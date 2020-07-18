@@ -1,0 +1,13 @@
+#title {
+	color: white;
+}
+
+#experiencePage {
+	height:100%;
+}
+
+#experiencePageWrapper {
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+}
