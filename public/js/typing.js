@@ -1,10 +1,55 @@
 var i = 0;
 var speed = 100; /* The speed/duration of the effect in milliseconds */
-var txt = "click an option on the left to find out more /n < /n < /n <"
-var resume = false
+var txt = "welcome to my website, click and scroll to find out more";
+var resume = false;
+screenText = false;
+
+var startScreen ="<img src = \"https://imgur.com/ydRCc3V.gif\">";
 
 
-function changeScreenText(itemClicked) {
+function sleep(ms) {
+  return new Promise(
+    resolve => setTimeout(resolve, ms)
+  );
+}
+
+async function eventLoop() {
+	console.log("start event Loop")
+	await sleep(5000);
+	await delayedChange();
+	console.log("end event Loop")
+	eventLoop()
+}
+
+function screenStart() {
+	screenText = false;
+	document.getElementById("screen"). innerHTML = startScreen;
+	eventLoop();
+}
+
+async function delayedChange() {
+	console.log("start delay change")
+	var fullGif = "<img src = \"https://imgur.com/yVw7OJP.gif\">";
+	if(screenText) {
+		return;
+	}
+	document.getElementById("screen").innerHTML = ""
+	var image = new Image()
+	image.src = "https://imgur.com/yVw7OJP.gif"
+	document.getElementById("screen").appendChild(image)
+	await sleep(35000);
+	if(screenText) {
+		return;
+	}
+	document.getElementById("screen").innerHTML = startScreen
+	console.log("end delay change")
+	return;
+}
+
+
+async function changeScreenText(itemClicked) {
+	screenText = true
+	document.getElementById("screen").innerHTML = "<p id = \"screenText\"> </p>"
 	document.getElementById("screenText").innerHTML = ""
 	i = 0
 	resume = false
@@ -26,7 +71,11 @@ function changeScreenText(itemClicked) {
 			resume = true
 			break;
 	}
-	typeWriter()
+	typeWriter();
+	await sleep(20000);
+	screenText = false;
+	console.log("end type after wait")
+
 }
 
 function typeWriter() {
@@ -53,6 +102,6 @@ function typeWriter() {
 
 function resumeCheck() {
 	if(resume == true) {
-		window.open('Resume_Robert_Mallow.pdf')
+		window.open('/Users/rmallow/Documents/testWeb/public/Resume_Robert_Mallow.pdf')
 	}
 }
