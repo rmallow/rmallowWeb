@@ -2,7 +2,11 @@ var i = 0;
 var speed = 100; /* The speed/duration of the effect in milliseconds */
 var txt = "welcome to my website, click and scroll to find out more";
 var resume = false;
-screenText = false;
+var screenText = false;
+var block = "&#9612;"
+var everyOther = true;
+
+var timeoutHolder = null
 
 var startScreen ="<img src = \"https://imgur.com/ydRCc3V.gif\">";
 
@@ -13,42 +17,23 @@ function sleep(ms) {
   );
 }
 
-async function eventLoop() {
-	console.log("start event Loop")
-	await sleep(5000);
-	await delayedChange();
-	console.log("end event Loop")
-	eventLoop()
-}
-
-function screenStart() {
-	screenText = false;
-	document.getElementById("screen"). innerHTML = startScreen;
-	eventLoop();
-}
-
-async function delayedChange() {
-	console.log("start delay change")
-	var fullGif = "<img src = \"https://imgur.com/yVw7OJP.gif\">";
-	if(screenText) {
-		return;
-	}
+function changeScreen() {
 	document.getElementById("screen").innerHTML = ""
 	var image = new Image()
 	image.src = "https://imgur.com/yVw7OJP.gif"
 	document.getElementById("screen").appendChild(image)
-	await sleep(35000);
-	if(screenText) {
-		return;
-	}
-	document.getElementById("screen").innerHTML = startScreen
-	console.log("end delay change")
-	return;
+	timeoutHolder = setTimeout(screenStart, 35000);
 }
 
+function screenStart() {
+	document.getElementById("screen"). innerHTML = startScreen;
+	timeoutHolder = setTimeout(changeScreen, 5000);
+}
 
 async function changeScreenText(itemClicked) {
-	screenText = true
+	if(timeoutHolder != null) {
+		clearTimeout(timeoutHolder)
+	}
 	document.getElementById("screen").innerHTML = "<p id = \"screenText\"> </p>"
 	document.getElementById("screenText").innerHTML = ""
 	i = 0
@@ -72,9 +57,7 @@ async function changeScreenText(itemClicked) {
 			break;
 	}
 	typeWriter();
-	await sleep(20000);
-	screenText = false;
-	console.log("end type after wait")
+	timeoutHolder = setTimeout(screenStart, 20000)
 
 }
 
