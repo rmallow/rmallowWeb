@@ -17,12 +17,19 @@ function sleep(ms) {
   );
 }
 
+function startFunction() {
+	var parent = document.getElementById('parentContainer');
+	var child = document.getElementById('childContainer');
+	child.style.right = child.clientWidth - child.offsetWidth + "px";
+	screenStart();
+}
+
 function changeScreen() {
 	document.getElementById("screen").innerHTML = ""
 	var image = new Image()
 	image.src = "https://imgur.com/yVw7OJP.gif"
 	document.getElementById("screen").appendChild(image)
-	timeoutHolder = setTimeout(screenStart, 35000);
+	timeoutHolder = setTimeout(screenStart, 37000);
 }
 
 function screenStart() {

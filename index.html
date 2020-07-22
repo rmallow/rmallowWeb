@@ -7,9 +7,11 @@
 		<link rel="stylesheet" type="text/css" href="css/infoPageStyle.css">
 		<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
 		<script src ="js/typing.js"></script>
+		<script src ="js/infoPage.js"></script>
+
 	</head>
-	<body onload = "screenStart()">
-		<h1 id = "notice"> UNDER CONSTRUCTION </h1>
+	<body onload = "startFunction(); startLogoPage()">
+		<div id = "parentContainer"> <div id = "childContainer">
 		<div id = "firstPageBox">  
 			<div id = "hiBox"> 
 				<div class = "paddingBox"> </div> 
@@ -26,7 +28,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div id = "navBox"> 
 				<div class = "navItem"> CLICK AN OPTION BELOW: </div>
 				<div id = "career" onclick="changeScreenText('career')" class = "navItem"> CAREER </div>
@@ -37,11 +39,67 @@
 				LOCATION </div>   
 				<div id = "resume" onclick="changeScreenText('resume')" class = "navItem"> RESUME </div> 
 			</div>
-		</div>
 
+		</div>
 		<div id = "experiencePage">
 			<h1 id = "title"> Experience </h1>
+			<div id = "logoContainer">
+				<div id = "logos">
+					<div id = "intro" class = "logoBox left leftLogoBoxOffScreen">
+						<p> cover letter type introduction, lorem ispum filler text, this is meant to be longer now, i like working for companies
+						and dealing with large data systems </p>
+					</div>
+					<div id = "boeing" class = "logoBox right rightLogoBoxOffScreen">
+						<div class = "logoBoxRow">
+							<h2> The Boeing Company </h2>
+							<img src = "https://i.imgur.com/7yIT0AJ.png" class = "topLeftLogoImg">
+						</div>
+						<p> Current Role : Software Engineer <br> Previous Role : Software Engineer Intern </p>
+					</div>
+					<div id = "mbusi" class = "logoBox left leftLogoBoxOffScreen">
+						<div class = "logoBoxRow">
+							<h2> Mercedes-Benz U.S. International, Inc. </h2>
+							<img src = "https://i.imgur.com/1VQQbpD.png" class = "topLeftLogoImg">
+						</div>
+						<p> Role : Research Software Developer </p>
+					</div>
+					<div id = "nisc" class = "logoBox right rightLogoBoxOffScreen">
+						<div class = "logoBoxRow">
+							<h2> National Information Solutions Cooperative </h2>
+							<img  src = "https://i.imgur.com/EwJ7JpA.png" class = "topLeftLogoImg">
+						</div>
+						<p> Role : Software Developer Intern </p>
+					</div>
+					<div id = "algo" class = "logoBox left leftLogoBoxOffScreen">
+						<div class = "logoBoxRow">
+							<h2> ALGO </h2>
+						</div>
+						<p> Personal data management system, originally intended for financial algorithims. The project has been expanded to allow for all types of live and historical data analysis with a focus on scalability. </p>
+					</div>
+					<div id = "fort" class = "logoBox right rightLogoBoxOffScreen">
+						<div class = "logoBoxRow">
+							<img src = "https://i.imgur.com/DKOmHXF.png" class = "topLeftLogoImg">
+							<h2> Fort Zumwalt School District Special Education </h2>
+						</div>
+						<p> • Wrote scripts for data collection and analysis that handles sensitive information and allows for collaboration among staff
+throughout an entire school district <br>
+• Updated to include statistic workload calculation based off all data for planning purposes </p>
+
+					</div>
+					<div id = "contact" class = "logoBox left leftLogoBoxOffScreen">
+						<p> i'm not a web developer <br> email: rmallow@crimson.ua.edu </p>
+					</div>
+
+					<div id = "sparky" class = "logoBox right rightLogoBoxOffScreen">
+						<p> add sparky pics </p>
+					</div>
+				</div>
+
+			</div>
 
 		</div>
+		<div id = "experiencePage2">
+		</div>
+	</div></div>
 	</body>
 </html>
