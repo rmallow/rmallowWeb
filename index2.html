@@ -2,16 +2,24 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>rob mallow</title>
-		<link rel="stylesheet" type="text/css" href="css/mainStyle2.css">
+		<title>meet me</title>
+		<link rel="stylesheet" type="text/css" href="public/css/infoPageStyle.css">
+		<link rel="stylesheet" type="text/css" href="public/css/mainStyle2.css">
+		<link rel="stylesheet" type="text/css" href="public/css/blockPageStyle.css">
+		<link rel="stylesheet" type="text/css" href="public/css/waterfallStyle.css">
 		<link href="https://fonts.googleapis.com/css?family=Archivo|Archivo+Narrow" rel="stylesheet">
 		<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://rawgit.com/jquery/jquery-mousewheel/master/jquery.mousewheel.js"></script>
-		<script src ="js/typing.js"></script>
+		<script src ="public/js/layout.js"></script>
+		<script src ="public/js/scroll.js"></script>
+		<script src ="public/js/tableBlock.js"></script>
+		<script src ="public/js/typing.js"></script>
+		<script src ="public/js/infoPage.js"></script>
 		<script src="https://kit.fontawesome.com/e912abba2a.js" crossorigin="anonymous"></script>
 	</head>
-	<body onload = "startFunction();">
+	<body onload = "startFunction(); setupTable(); disableScroll(); scrollSetup()">
+		<div id = "parentContainer"> <div id ="childContainer"> 
 		<div id = "firstPageBox" class = "viewBox forwardVert">  
 			<div id = "hiBox"> 
 				<div class = "paddingBox"> </div> 
@@ -39,5 +47,13 @@
 			</div>
 
 		</div>
+		<div id = "blockPageBox" class = "viewBox scrollForwardHoriz forwardVert scroll">
+			<div id = "tableBackgroundBox"></div>
+			<table id = "blockTable"> </table>
+		</div>
+		<div id = "waterfallBox" class = "viewBox forwardVert" > ?? </div>
+
+		<div id = "waterfallBox2" class = "viewBox forwardVert" > ?? </div>
+	</div></div>
 	</body>
 </html>

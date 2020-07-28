@@ -1,0 +1,229 @@
+html, body {
+	margin: 0;
+	max-width: 100%;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	background-color: #1f1c1a;
+	font-family: 'Orbitron', sans-serif;
+}
+
+
+.notice {
+	text-align: center;
+	position: relative;
+	color: red;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+#parentContainer {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#childContainer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: -17px; /* Increase/Decrease this value for cross-browser compatibility */
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#bumped {
+	bottom: 1%;
+}
+
+
+#firstPageBox {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width:100%;
+	color: white;
+	background-color: #69e6ff;
+}
+
+#hiBox, #navBox {
+	width: 20%;
+	height: 60%;
+}
+
+#navBox {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#navBox div {
+	height: 25%;
+}
+
+
+#hiBox {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: 3em;
+}
+
+#hiBox p {
+	height: 1%;
+	width: 1%;
+
+}
+
+.paddingBox {
+	width: 20%;
+	height: 20%;
+}
+
+#screenText {
+	line-height: 1.5em;
+	color: #39ff14;
+}
+
+#screenImage {
+	width: 75% !important;
+	height: auto !important;
+}
+
+#computerBox {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction:  column;
+	width: 50%;
+	height: 50%;
+	border-radius: 1em;
+	box-shadow: -10px 10px #737373;
+	background-color: #ffe2ab;
+}
+
+#computerBox img, p {
+	width: 100%;
+	height: 100%;
+	max-height: 200px;
+	max-width: 350px;
+}
+
+/*
+#computerWrapper > img {
+	box-shadow: -10px 10px #737373;
+}
+*/
+
+#screen {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	top: 12.5%;
+	left: 9%;
+	position: absolute;
+	width: 65%;
+	height: 75%;
+	max-width: 90%;
+	max-height: 80%;
+	overflow: hidden;
+}
+
+#screen > img {
+	width: 90%;
+	height: auto;
+	margin: auto;
+	max-width: 300px;
+}
+
+.navItem {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction:  column;
+}
+
+.navButton {
+	width: 40%;
+	min-width: 100px;
+	border:medium solid #ffe8ba;
+	border-radius: .25em;
+	color: white;
+	background-color:#ffc757;
+	padding: 3%;
+-webkit-transition: color .3s ease-in-out, border-color .3s ease-in-out;  /* Chrome 1-25, Safari 3.2+ */
+     -moz-transition: color .3s ease-in-out, border-color .3s ease-in-out;  /* Firefox 4-15 */
+       -o-transition: color .3s ease-in-out, border-color .3s ease-in-out;  /* Opera 10.50–12.00 */
+          transition: color .3s ease-in-out, border-color .3s ease-in-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+ }
+
+.navButton:hover {
+	color:red;
+	border-color:red;
+	font-style:italic;
+}
+
+
+#computerWrapper {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	max-width: 90%;
+	max-height: 60%;
+}
+
+.viewBox {
+	position: absolute;
+	width: 100%;
+}
+
+.nextView {
+	z-index: 9999;
+}
+
+
+@media screen and (orientation: portrait) { 
+	#firstPageBox {
+		flex-direction: column;
+	}
+	#hiBox {
+		flex-direction: row;
+		height: 20%;
+		width: 100%;
+	}
+	.paddingBox {
+		height: 0;
+		width: 0;
+	}
+	#hiBox p {
+		text-align: center;
+		height: auto;
+		width: 100%;
+	}
+
+	#navBox {
+		flex-direction: row;
+		width: 100%;
+		height: 20%;
+	}
+	.navItem {
+		width: 15%;
+	}
+	#computerBox {
+		height: 25%;
+		width: 65%;
+	}
+	#computerBox img, p {
+		max-width: 550px;
+		max-height: 350px;
+	}
+
+ }

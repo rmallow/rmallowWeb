@@ -20,7 +20,9 @@ function sleep(ms) {
 function startFunction() {
 	var parent = document.getElementById('parentContainer');
 	var child = document.getElementById('childContainer');
-	child.style.right = child.clientWidth - child.offsetWidth + "px";
+	if(child != null) {
+		child.style.right = child.clientWidth - child.offsetWidth + "px";
+	}
 	screenStart();
 }
 

@@ -1,0 +1,164 @@
+#transitionBox {
+	background: linear-gradient(180deg, #69e6ff, #ff8b2b 70% );
+	height: 30%;
+}
+
+#blockPageBox {
+	height: 100%;
+	width:100%;
+	overflow:hidden;
+	position: relative;
+}
+
+#tableBackgroundBox {
+	height: 100%;
+	width:100%;
+}
+
+#blockTable {
+	width: auto;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+
+}
+
+#tableBackgroundBox {
+
+}
+
+td {
+	background-color:  transparent;
+}
+
+table, tr, td {
+	font-family: 'helvbold', 'Archivo', sans-serif !important;
+	border-collapse: collapse;
+}
+
+td {
+	border: 15px solid transparent;
+}
+
+.tableCell {
+	background-color: transparent;
+	position: relative;
+	/*
+	border-left: none;
+	border-top:none;
+	*/
+	background-clip: padding-box
+}
+
+.backDiv {
+	height:100%;
+	position: absolute;
+	top:0;
+}
+
+.showTableDiv {
+	border-radius: 5px;
+	background-color: #F5F5F5;
+	box-shadow: -8px 8px #737373;
+}
+/*
+tr:last-of-type > td {
+	border-bottom:none;
+}
+
+tr {
+	border-bottom: none;
+}
+*/
+
+.textTitle {
+	display:inline-block; 
+	font-size: 1.25em;
+	font-style: italic;
+}
+
+.companyLogo {
+	display: flex;
+	flex-direction: column;
+}
+
+.logoImg {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 1em;
+	text-align: center;
+}
+
+.funImg > img {
+	width: 100%;
+	height: auto;
+	border-radius: 50%;
+}
+
+.funImg {
+	animation: scaleAndRotate 14s infinite linear;
+	border-radius: 50%;
+}
+
+.logoImg > img {
+	max-width: 100px;
+	width: 30%;
+	height: auto;
+}
+
+.logoImg > p {
+	height: auto;
+}
+
+.noBackground {
+	background-color: transparent;
+	box-shadow: none;
+}
+
+.arrow {
+	animation: pop 4s infinite linear;
+	color: #2e2e2e;
+}
+
+.sortaVerticallyCentered {
+	height:auto !important;
+	width:auto !important;
+	padding: 5%;
+}
+
+@keyframes pop {
+	from {
+		font-size: 1.5em;
+	}
+	50% {
+		font-size: 4em;
+	}
+	to {
+		font-size: 1.5em;
+	}
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(359deg);
+	}
+}
+
+@keyframes scaleAndRotate {
+	from {
+		transform: scale(1,1) rotate(0deg);
+	}
+	50% {
+		transform: scale(2.5,2.5) rotate(180deg);
+	}
+	to {
+		transform: scale(1,1) rotate(359deg);
+	}
+}
+
